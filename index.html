@@ -5,15 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Ujipin-backstage</title>
-  <link rel="stylesheet" href="/prd/styles/bootstrap.min.css">
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/bootstrap.min.css">
+  <link rel="stylesheet" href="/styles/app.css">
 </head>
 <body>
+  <header class="container-fluid index-head">
+    <h1>后台管理系统</h1>
+  </header>
+  <aside>
+    <ul id="accordion" class="accordion">
+  		<li>
+  			<div class="link">
+          <i class="fa fa-paint-brush"></i>
+          首页
+          <i class="fa fa-chevron-down"></i>
+        </div>
+  			<ul class="submenu">
+  				<li><a href="#">Photoshop</a></li>
+  				<li><a href="#">HTML</a></li>
+  				<li><a href="#">CSS</a></li>
+  				<li><a href="#">Maquetacion web</a></li>
+  			</ul>
+  		</li>
+  		<li>
+  			<div class="link"><i class="fa fa-code"></i>商品信息
+          <i class="fa fa-chevron-down"></i></div>
+  			<ul class="submenu">
+  				<li><a href="#">Javascript</a></li>
+  				<li><a href="#">jQuery</a></li>
+  				<li><a href="#">Frameworks javascript</a></li>
+  			</ul>
+  		</li>
+  		<li>
+  			<div class="link"><i class="fa fa-user"></i>用户管理<i class="fa fa-chevron-down"></i></div>
+  			<ul class="submenu">
+  				<li><a href="#">Tablets</a></li>
+  				<li><a href="#">Dispositivos mobiles</a></li>
+  				<li><a href="#">Medios de escritorio</a></li>
+  				<li><a href="#">Otros dispositivos</a></li>
+  			</ul>
+  		</li>
+  		<li><div class="link"><i class="fa fa-list-ul"></i>订单信息<i class="fa fa-chevron-down"></i></div>
+  			<ul class="submenu">
+  				<li><a href="#">Google</a></li>
+  				<li><a href="#">Bing</a></li>
+  				<li><a href="#">Yahoo</a></li>
+  				<li><a href="#">Otros buscadores</a></li>
+  			</ul>
+  		</li>
+  	</ul>
+  </aside>
+  <section class="main-content" >
+    <ng-view></ng-view>
+  </section>
 
 
-  <script src="/prd/scripts/libs/jquery.min.js"></script>
-  <script src="/prd/scripts/libs/bootstrap.min.js"></script>
-  <script src="/prd/scripts/libs/angular.min.js"></script>
-  <script src="/prd/scripts/libs/angular-route.min.js"></script>
-  <script src="/prd/scripts/index.js"></script>
+
+
+  <script src="/scripts/libs/jquery.min.js"></script>
+  <script src="/scripts/libs/bootstrap.min.js"></script>
+  <script src="/scripts/libs/angular.min.js"></script>
+  <script src="/scripts/libs/angular-route.min.js"></script>
+  <script src="/scripts/index.js"></script>
 </body>
 </html>
