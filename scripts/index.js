@@ -30,11 +30,14 @@ var backstage = angular.module('myBackstage',['ngRoute']);
 backstage.config(['$routeProvider',function($routeProvider){
   $routeProvider
     .when('/welcome',{
-      templateUrl: '/partials/welcome.html'
-      // controller: 'welcomeController'
+      templateUrl: '/partials/welcome.html',
+      controller: 'welcomeController'
     })
-    // .otherwise({
-    //   redirectTo: '/welcome'
-    // })
+    .otherwise({
+      redirectTo: '/welcome'
+    })
 
 }]);
+backstage.controller('welcomeController',['$scope',function($scope){
+	$scope.title = "eee";
+}])
