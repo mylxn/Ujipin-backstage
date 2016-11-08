@@ -113,8 +113,15 @@ aside{
  	color: #FFF;
  }
 
+ .txt-title{
+   margin-bottom:20px;
+ }
+
  .main-content{
    margin-left:210px;
    height:100%;
-   
+ }
+
+ .smallerimg{
+   width:40px;
  }

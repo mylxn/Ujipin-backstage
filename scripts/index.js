@@ -26,18 +26,28 @@ $(function() {
 });
 
 
-var backstage = angular.module('myBackstage',['ngRoute']);
-backstage.config(['$routeProvider',function($routeProvider){
-  $routeProvider
-    .when('/welcome',{
+var backstage = angular.module('myBackstage',['ui.router','backstage-ctrl']);
+backstage.config(function($urlMatcherFactoryProvider){
+	$urlMatcherFactoryProvider.caseInsensitive(true);
+})
+backstage.config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
+  $stateProvider
+    .state('welcome',{
+			url: '/welcome',
       templateUrl: '/partials/welcome.html',
       controller: 'welcomeController'
     })
-    .otherwise({
-      redirectTo: '/welcome'
-    })
+		.state('productlist',{
+			url:'/productlist',
+			templateUrl:'/partials/productlist.html',
+			controller: 'prolistController'
+		})
+		.state('proClassify',{
+			url:'/proClassify',
+			templateUrl:'partials/productclassify.html',
+			controller: 'proClassifyController'
+		})
+
+		$urlRouterProvider.otherwise('/welcome');
 
 }]);
-backstage.controller('welcomeController',['$scope',function($scope){
-	$scope.title = "eee";
-}])

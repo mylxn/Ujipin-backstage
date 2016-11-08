@@ -1,0 +1,46 @@
+<div class="txt-title row">
+  <h2 class="col-xs-6 col-lg-6">
+    {{title}}
+  </h2>
+
+  <div class="col-xs-3 col-lg-3">
+      <div class="input-group">
+        <input type="text" class="form-control">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">搜索</button>
+        </span>
+      </div>
+    </div>
+  <span class="col-xs-3 col-lg-3">
+    <button type="button" class="btn btn-info">增加商品</button>
+  </span>
+</div>
+
+<table class="table table-striped">
+  <tr class="text-center">
+    <td>图片</td>
+    <td>介绍</td>
+    <td>市场价</td>
+    <td>特价</td>
+    <td>操作</td>
+  </tr>
+  <tr class="text-center" ng-repeat="pro in prolist">
+    <td>
+      <img class="smallerimg  img-thumbnail" ng-src="{{pro.img}}" alt="{{pro.img}}">
+    </td>
+    <td>
+      <p>{{pro.title}}</p>
+    </td>
+    <td>
+      {{pro.marketprice}}
+    </td>
+    <td>
+      {{pro.nowprice}}
+    </td>
+    <td>
+      <button type="button" class="btn btn-danger btn-xs">删除</button>
+      <button type="button" class="btn btn-primary btn-xs">修改</button>
+      <button type="button" class="btn btn-success btn-xs">详情</button>
+    </td>
+  </tr>
+</table>
