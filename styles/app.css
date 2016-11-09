@@ -1,3 +1,6 @@
+body,html{
+  height:100%;
+}
 body {
     color: #797979;
 	  background: #f2f2f2;
@@ -9,6 +12,10 @@ body {
 ul,li,body,h1,h2,h3,h4,h5{
   padding:0;
   margin:0;
+}
+a{
+  text-decoration: none;
+  display: inline-block;
 }
 li{
   list-style: none;
@@ -23,18 +30,19 @@ h1{
   margin:0;
   line-height: 80px;
 }
+.headbtn{
+  margin-top:25px;
+}
 aside{
-  width: 210px;
-  height: 100%;
-  position: fixed;
+  height: 0px;
   background: #424a5d;
+  padding-bottom:100%;
 }
 .accordion {
  	width: 100%;
  	background: #FFF;
-  height:100%;
+  padding-left:10px;
   background: #424a5d;
-  padding:10px;
  }
 
 .accordion .link {
@@ -114,14 +122,16 @@ aside{
  }
 
  .txt-title{
-   margin-bottom:20px;
+   margin:20px 0 20px 0;
  }
 
  .main-content{
-   margin-left:210px;
    height:100%;
  }
 
  .smallerimg{
    width:40px;
+ }
+ .detailimg{
+   width:100px;
  }

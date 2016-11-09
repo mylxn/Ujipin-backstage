@@ -26,7 +26,7 @@ $(function() {
 });
 
 
-var backstage = angular.module('myBackstage',['ui.router','backstage-ctrl']);
+var backstage = angular.module('myBackstage',['ui.router','backstage-ctrl','backstage-service']);
 backstage.config(function($urlMatcherFactoryProvider){
 	$urlMatcherFactoryProvider.caseInsensitive(true);
 })
@@ -46,6 +46,21 @@ backstage.config(['$stateProvider','$urlRouterProvider',function($stateProvider,
 			url:'/proClassify',
 			templateUrl:'partials/productclassify.html',
 			controller: 'proClassifyController'
+		})
+		.state('proSearch',{
+			url:'/proSearch/:search',
+			templateUrl:'partials/productSearch.html',
+			controller: 'proSearchController'
+		})
+		.state('proDetail',{
+			url:'/proDetail/:id',
+			templateUrl:'partials/productDetail.html',
+			controller: 'proDetailController'
+		})
+		.state('proAdd',{
+			url:'/proAdd',
+			templateUrl:'partials/productAdd.html',
+			controller: 'proAddController'
 		})
 
 		$urlRouterProvider.otherwise('/welcome');
